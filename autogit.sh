@@ -1,4 +1,4 @@
 git add .
-git commit -m "next topic: URL Building | Problems in Codespace"
+git commit -m "Problems in Codespace | setting templates and static folders"
 git push
 git status
