@@ -1,9 +1,15 @@
 from flask import Flask, escape
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 
+load_dotenv()
+name = os.getenv("FLASK_NAME")
+env = os.getenv("FLASK_ENV")
 
 # Testing URLs distincts
+
 
 @app.route("/hello")
 def hello_world():  # put application's code here
