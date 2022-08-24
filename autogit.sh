@@ -1,4 +1,6 @@
 git add .
-git commit -m "Problems in Codespace and Gitpod | Continue the project on PC"
+git commit -m "Next step: Templates"
 git push
 git status
+
+# link: https://www.tutorialspoint.com/flask/flask_templates.htm
