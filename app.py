@@ -13,7 +13,7 @@ env = os.getenv("FLASK_ENV")
 # OBS.: Flask will try to find the HTML file on "templates" folder
 @app.route("/")
 def root():
-    return render_template("auth/login.html")
+    return render_template("index.html")
 
 
 @app.route("/calculate/<int:score>")
