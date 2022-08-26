@@ -1,4 +1,4 @@
-from flask import Flask, escape, url_for, redirect, request
+from flask import Flask, escape, url_for, redirect, request, render_template
 from dotenv import load_dotenv
 import os
 
@@ -9,10 +9,17 @@ name = os.getenv("FLASK_NAME")
 env = os.getenv("FLASK_ENV")
 
 
-# Testing URLs distincts
+# HTML file can be rendered by the render_template() function.
+# OBS.: Flask will try to find the HTML file on "templates" folder
 @app.route("/")
 def root():
-    return "<p>Application working!</p>"
+    return render_template("auth/login.html")
+
+
+@app.route("/calculate/<int:score>")
+def calcTemp(score):
+    # 'marks' is 'score' on HTML file rendering
+    return render_template("calculate.html", marks=score)
 
 
 @app.route("/admin")
