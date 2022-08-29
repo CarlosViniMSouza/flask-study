@@ -1,0 +1,11 @@
+The data from a client’s web page is sent to the server as a global request object. In order to process the request data, it should be imported from the Flask module.
+
+Form − It is a dictionary object containing key and value pairs of form parameters and their values.
+
+Args − parsed contents of query string which is part of URL after question mark (?).
+
+Cookies − dictionary object holding Cookie names and values.
+
+Files − data pertaining to uploaded file.
+
+Method − current request method.
