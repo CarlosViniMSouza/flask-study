@@ -1,5 +1,5 @@
 git add .
-git commit -m "Next step: Cookies"
+git commit -m "Modifieds: files .txt added in notes folder"
 git push
 git status
 

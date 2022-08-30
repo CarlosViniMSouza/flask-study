@@ -61,25 +61,5 @@ def resultResearch():
 
 
 if __name__ == "__main__":
+    # consult file in "note/pptionalParam.txt"
     app.run(host="0.0.0.0", port=5050, debug=True)
-
-
-"""
-Optional Parameters:
-
-1. host = Hostname to listen on. Defaults to 127.0.0.1 (localhost). 
-            Set to ‘0.0.0.0’ to have server available externally
-2. port = Defaults to 5000
-3. debug = Defaults to false. If set to true, provides a debug information
-4. options = To be forwarded to underlying Werkzeug server.
-"""
-
-"""
-Methods & Description:
-
-1. GET -> Sends data in unencrypted form to the server. Most common method.
-2. HEAD -> Same as GET, but without response body
-3. POST -> Used to send HTML form data to server. Data received by POST method is not cached by server.
-4. PUT -> Replaces all current representations of the target resource with the uploaded content.
-5. DELETE -> Removes all current representations of the target resource given by a URL
-"""
