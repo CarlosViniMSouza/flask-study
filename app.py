@@ -41,19 +41,23 @@ def hello_user(user):
         return redirect((url_for("hello_guest", guest=user)))
 
 
-@app.route("/login", methods=["POST", "GET"])
-def login():
-    if request.method == "POST":
-        user = request.form["text"]
-        return redirect(url_for("hello_user", name=user))
-    else:
-        user = request.args.get("text")
-        return redirect(url_for("hello_user", name=user))
-
-
 @app.route("/blogs/<int:blogID>")
 def blogs(blogID):
     return f"This blog have the ID: {escape(blogID)}"
+
+
+@app.route("/research")
+def research():
+    return render_template("form/research.html")
+
+
+@app.route("/resultResearch", methods=["GET", "POST"])
+def resultResearch():
+    if request.method == "POST":
+        result = request.form
+        return render_template("form/result.html", result=result)
+    else:
+        return redirect(url_for("hello_guest"))
 
 
 if __name__ == "__main__":
