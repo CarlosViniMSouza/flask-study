@@ -1,4 +1,4 @@
-from flask import Flask, escape, url_for, redirect, request, render_template
+from flask import Flask, escape, url_for, redirect, request, render_template, make_response
 from dotenv import load_dotenv
 import os
 
@@ -16,10 +16,10 @@ def root():
     return render_template("index.html")
 
 
-@app.route("/calculate/<int:score>")
-def calcTemp(score):
+@app.route("/calculate")
+def calcTemp():
     # 'marks' is 'score' on HTML file rendering
-    return render_template("calculate.html", marks=score)
+    return render_template("calculate.html")
 
 
 @app.route("/admin")
@@ -60,6 +60,16 @@ def resultResearch():
         return redirect(url_for("hello_guest"))
 
 
+# consult file in "note/cookiesFlask.txt"
+@app.route("/setcookie")
+def setCookies():
+    if request.method == "POST":
+        user = request.form["name"]
+        result = make_response(render_template("calculate.html"))
+        result.set_cookie("userID", user)
+
+        return result
+
 if __name__ == "__main__":
-    # consult file in "note/pptionalParam.txt"
+    # consult file in "note/optionalParam.txt"
     app.run(host="0.0.0.0", port=5050, debug=True)

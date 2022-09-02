@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Calculate Temperature</title>
 </head>
+
 <body>
-    {% if marks >= 50 %}
-        <h2>Result = accepted!</h2>
-    {% else %}
-        <h2>Result = recused!</h2>
-    {% endif %}
+    <form action="/setcookie" method="post">
+        <h3> Enter your datas </h3>
+        <p> Name
+            <label>
+                <input type="text" name="Name" />
+            </label>
+        </p>
+        <p> Age
+            <label>
+                <input type="number" name="Age" />
+            </label>
+        </p>
+        <label>
+            <input type="submit" name="Access" />
+        </label>
+        </p>
+    </form>
 </body>
+
 </html>

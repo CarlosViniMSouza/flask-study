@@ -1,6 +1,6 @@
 git add .
-git commit -m "Modifieds: files .txt added in notes folder"
+git commit -m "Next step: Sessions"
 git push
 git status
 
-# link: https://www.tutorialspoint.com/flask/flask_cookies.htm
+# link: https://www.tutorialspoint.com/flask/flask_sessions.htm
