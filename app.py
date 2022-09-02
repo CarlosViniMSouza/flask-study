@@ -1,4 +1,4 @@
-from flask import Flask, escape, url_for, redirect, request, render_template, make_response
+from flask import Flask, escape, url_for, redirect, request, render_template, make_response, session
 from dotenv import load_dotenv
 import os
 
@@ -48,14 +48,14 @@ def blogs(blogID):
 
 @app.route("/research")
 def research():
-    return render_template("form/research.html")
+    return render_template("res/research.html")
 
 
 @app.route("/resultResearch", methods=["GET", "POST"])
 def resultResearch():
     if request.method == "POST":
         result = request.form
-        return render_template("form/result.html", result=result)
+        return render_template("res/result.html", result=result)
     else:
         return redirect(url_for("hello_guest"))
 
@@ -70,6 +70,14 @@ def setCookies():
 
         return result
 
+
+@app.route("/logout")
+def logout():
+    # A session with each client is assigned a Session ID. 
+    session.pop("username", None)
+    return redirect(url_for("root"))
+
+
 if __name__ == "__main__":
     # consult file in "note/optionalParam.txt"
-    app.run(host="0.0.0.0", port=5050, debug=True)
+    app.run(host="0.0.0.0", port=5555, debug=True)
