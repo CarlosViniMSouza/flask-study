@@ -1,5 +1,5 @@
 git add .
-git commit -m "Next step: Redirect & Errors"
+git commit -m "I need an interval for refresh my brain!"
 git push
 git status
 
