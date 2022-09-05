@@ -1,6 +1,6 @@
 git add .
-git commit -m "I need an interval for refresh my brain!"
+git commit -m "Next step: Message Flash"
 git push
 git status
 
-# link: https://www.tutorialspoint.com/flask/flask_redirect_and_errors.htm
+# link: https://www.tutorialspoint.com/flask/flask_message_flashing.htm

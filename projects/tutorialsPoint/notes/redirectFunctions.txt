@@ -1,0 +1,9 @@
+Prototype of redirect() function is as below:
+
+--> Flask.redirect(location, statuscode, response)
+
+In the above function:
+
+° location = parameter is the URL where response should be redirected.
+° statuscode = sent to browser’s header, defaults to 302.
+° response = parameter is used to instantiate response.
