@@ -1,6 +1,6 @@
 git add .
-git commit -m "Next step: Message Flash"
+git commit -m "Mega Tutorial Flask -> started again"
 git push
 git status
 
-# link: https://www.tutorialspoint.com/flask/flask_message_flashing.htm
+# link: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
