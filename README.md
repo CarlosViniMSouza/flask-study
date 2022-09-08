@@ -5,7 +5,7 @@
 ## Table Content - Tutorials Point
 
 ```text
-BASIC:
+Basic:
 
 - Home
 - Overview
