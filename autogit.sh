@@ -1,5 +1,5 @@
 git add .
-git commit -m "megaTutorial -> Templates"
+git commit -m "megaTutorial -> Templates (started | stopped)"
 git push
 git status
 
